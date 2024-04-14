@@ -38,21 +38,19 @@ git push --force --all origin
 git push --all origin
 
 Потоа следуваше управување со конфликти и користење на rebase:
-
 git checkout bug2
 git rebase master
 git add .
 git rebase --continue
 
 Завршни чекори:
- git push --force --all origin
- git checkout master
- git merge bug2
- git push origin master
- git push origin bug2 --force
+git push --force --all origin
+git checkout master
+git merge bug2
+git push origin master
+git push origin bug2 --force
 
 Логирање на сите промени и документирање на текот на работа:
- git log > logs.txt
+git log > logs.txt
 
-На крајот, сè е во синхронизација со оддалечениот репозиториум, потврдено со:
- git push origin master # командата враќа "Everything up-to-date".
+На крајот, сè е во синхронизација со оддалечениот репозиториум . 
