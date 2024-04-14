@@ -1,53 +1,58 @@
+Процесот на работа со Git за лабораториската вежба започна со иницијализација на локален репозиториум и негово поврзување со оддалечен репозиториум:
 cd C:\Users\Xhevit Tairi\SI_2024_lab1_211279
 git init
 git remote add origin https://github.com/Xheviti/SI_2024_lab1_211279
+
+Потоа се креираше README.md датотека со лични информации:
 echo "Xhevit Tairi, 211279" > README.md
 git add README.md
 git commit -m "Initial commit"
+
+Додавањето и потврдувањето на почетниот код во репозиториумот:
 git add .
 git commit -m "Add starter code"
 git push --all origin
+
+Создадени беа две гранки за решавање на различни проблеми:
 git checkout -b bug1
 git add SILab1_1.java
 git commit -m "Fix wrong condition in filterOddLengthStrings"
-git checkout master
+git push origin bug1
+
 git checkout -b bug2
 git add SILab1_2.java
 git commit -m "Fix wrong condition in makeBigStringFrom"
 git push origin bug2
-git checkout master
-git checkout bug1
-git push origin bug1
-git checkout bug2
-git add SILab1Main.java
-git commit -m "Call method makeBigStringFrom in main class"
-git push origin bug2
-git checkout master
-git pull origin master
-git push origin master
-git checkout bug1
-git pull origin bug1
-git push origin bug1
-git checkout bug2
-git pull origin bug2
-git push origin bug2
-git push --all origin
+
+Секоја гранка беше освежена и споена со главната гранка:
 git checkout master
 git merge bug1
-git push --all origin
+git push origin master
+
 git checkout bug2
 git fetch origin
 git rebase origin/master
-git fetch origin
+git push --force --all origin
+
+Сите гранки беа синхронизирани со оддалечениот репозиториум:
+git push --all origin
+
+Потоа следуваше управување со конфликти и користење на rebase:
+
 git checkout bug2
 git rebase master
 git add .
 git rebase --continue
-git rebase
-git rebase master
-git push --force --all origin
-git checkout master
-git merge bug2
-git push origin master
-git push origin bug2 --force
-git log > logs.txt
+
+Завршни чекори:
+ git push --force --all origin
+ git checkout master
+ git merge bug2
+ git push origin master
+ git push origin bug2 --force
+
+Логирање на сите промени и документирање на текот на работа:
+ git log > logs.txt
+
+На крајот, сè е во синхронизација со оддалечениот репозиториум, потврдено со:
+ git push origin master # командата враќа "Everything up-to-date".
