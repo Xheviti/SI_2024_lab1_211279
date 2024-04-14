@@ -1,3 +1,9 @@
+commit e4b881af4e3bacd63d89c687bffead27db197765
+Author: Џевит Таири <dzhevit.tairi@students.finki.ukim.mk>
+Date:   Sun Apr 14 21:27:35 2024 +0200
+
+    Add starter code
+
 commit b52c9f5eb7019eafd89e4878c5c85d94059758f7
 Author: Џевит Таири <dzhevit.tairi@students.finki.ukim.mk>
 Date:   Sun Apr 14 20:48:24 2024 +0200
